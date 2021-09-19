@@ -22,11 +22,14 @@ Regardez son contenu et notez qu'il ne définit qu'une seule procédure, **Add**
 Exécutons maintenant cet exemple:
   - Ouvrez deux terminaux
   - Dans le premier terminal, lancez le serveur
-    `python3 calc_server.py`
+  
+  `python3 calc_server.py`
   - Dans le second terminal lancez le client en lui passant en paramètre deux nombres entiers
-    `python3 calc_client.py 20 22`
+  
+  `python3 calc_client.py 20 22`
 
 Sous Linux, vous pouvez également "regarder" le contenu du message envoyé en coupant le serveur (CTRL+C), en exécutant la commande ci-dessous puis en relançant le client.
+
 `nc -l localhost 50051`
 
 ## Step 2. Modification du .proto et mise à jour du serveur et du client
