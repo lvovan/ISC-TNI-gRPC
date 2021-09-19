@@ -13,20 +13,20 @@ Lors de cette séance de travaux pratiques nous allons explorer gRPC et Protocol
 
 ## Step 1. Exécution de l'exemple de démarrage
 
-Un fichier de définition *protobuf* (.proto) définissant l'interface est disponible dans le dossier **step1/calc.proto**.
+Dans le dossier **work**, un fichier de définition *protobuf* (.proto) définissant l'interface est disponible dans **protos/calc.proto**.
 
 Regardez son contenu et notez qu'il ne définit qu'une seule procédure, **Add** qui:
   - Prend en entrée un message **AddRequest** (deux entiers **a** et **b**),
   - et renvoie un message de type **AddResponse** (un entier, **result**).
 
 Exécutons maintenant cet exemple:
-  - Ouvrez deux terminaux
-  - Dans le premier terminal, lancez le serveur
+  1. Dans un premier terminal, lancez le serveur avec la commande
   
   `python3 calc_server.py`
-  - Dans le second terminal lancez le client en lui passant en paramètre deux nombres entiers
+  2. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers
   
   `python3 calc_client.py 20 22`
+  3. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
 
 Sous Linux, vous pouvez également "regarder" le contenu du message envoyé en coupant le serveur (CTRL+C), en exécutant la commande ci-dessous puis en relançant le client.
 
@@ -34,11 +34,16 @@ Sous Linux, vous pouvez également "regarder" le contenu du message envoyé en c
 
 ## Step 2. Modification du .proto et mise à jour du serveur et du client
 
-Nous allons maintenant modifier le fichier .proto ce fichier pour générer automatiquement le code serveur et le code client.
+Mdifiez maintenant le fichier **protos/calc.proto** afin d'y ajouter une procédure **Multiply**:
+  - Ajoutez la procédure **rpc** adéquate
+  - Trouvez une manière élégante de déclarer les types de message qui seront utilisés dans votre serveur
+  - Modifier le client afin qu'il appelle Add et Multiply avec les mêmes paramètres d'entrée
 
- Générez le client et le serveur:
+Générez le client et le serveur:
 
 `python -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/calc.proto`
+
+
 
 ## Step 3. Ajout de structure de données complexes (CalculateArea)
 
