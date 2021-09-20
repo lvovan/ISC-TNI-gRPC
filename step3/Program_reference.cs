@@ -11,14 +11,10 @@ namespace Calc
         {
             var x = int.Parse(args[0]);
             var y = int.Parse(args[1]);
-            Console.WriteLine($"{x} {y}");
 
-            // Création du client 
-            // var httpHandler = new HttpClientHandler();
-            // httpHandler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            // Création du client (nous devons accepter )
             AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            using var channel = GrpcChannel.ForAddress
-                ("http://localhost:50051"/*, new GrpcChannelOptions { HttpHandler = httpHandler }*/);
+            using var channel = GrpcChannel.ForAddress("http://localhost:50051");
             var client =  new Calc.CalcClient(channel);
 
             // Appels au serveur

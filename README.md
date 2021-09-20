@@ -21,7 +21,7 @@ Exécutons maintenant cet exemple:
   2. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python3 calc_client.py 20 22`
   3. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
 
-Sous Linux, vous pouvez également "regarder" le contenu du message envoyé en coupant le serveur (CTRL+C), en exécutant `nc -l localhost 50051` (qui lancera une écoute sur le port **localhost:50051**) puis en relançant le client.
+Sous Linux, vous pouvez également "regarder" le contenu du message tel qu'il est envoyé sur le réseau en coupant le serveur (CTRL+C) puis en exécutant `nc -l localhost 50051` (qui lancera une écoute sur le port **localhost:50051**) puis en relançant le client.
 
 ## Step 2. Modification du .proto et mise à jour du serveur et du client
 Modifiez maintenant le fichier **protos/calc.proto** afin d'y ajouter une procédure **Multiply**:
