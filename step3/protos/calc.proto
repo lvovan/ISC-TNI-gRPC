@@ -1,13 +1,18 @@
-service RouteGuide {
+syntax = "proto3";
 
-    rpc Add(int32 a, int32 b) returns (int32) {}
+package calc;
 
-    rpc Multiply(int32 a, int32 b) returns (int32) {}
-
-    rpc Scale(Rectangle rect, int32 factor) returns (int32) {}
+message ArithmeticRequest {
+	int32 a = 1;
+	int32 b = 2;
 }
 
-message Rectangle {
-    int32 width = 1;
-    int32 length = 2;
-  }
+message ArithmeticResponse {
+	int32 result = 1;
+}
+
+service Calc {
+	rpc Add(ArithmeticRequest) returns (ArithmeticResponse) {}
+	rpc Multiply(ArithmeticRequest) returns (ArithmeticResponse) {}
+}
+

@@ -12,7 +12,7 @@ message ArithmeticResponse {
 }
 
 service Calc {
-    rpc Add(ArithmeticRequest) returns (ArithmeticResponse) {}
+	rpc Add(ArithmeticRequest) returns (ArithmeticResponse) {}
 	rpc Multiply(ArithmeticRequest) returns (ArithmeticResponse) {}
 }
 

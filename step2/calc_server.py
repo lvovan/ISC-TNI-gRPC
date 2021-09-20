@@ -23,6 +23,7 @@ def serve():
     calc_pb2_grpc.add_CalcServicer_to_server(CalcServicer(), server)
     server.add_insecure_port('[::]:50051')
     server.start()
+    print("Serveur démarré")
     server.wait_for_termination()
 
 if __name__ == '__main__':
