@@ -52,8 +52,8 @@ Comme vu en cours, l'intérêt majeur des IDL tels que le permet gRPC via Protob
 
   5. Remplacez le contenu de votre fichier **Program.cs** par [celui-ci](step3/Program_reference.cs). Si nécessaire, modifiez les noms de type pour correspondre à ceux de votre fichier .proto.
   Notez que la casse des noms des objets et de leurs propriétés ont été ajustés aux nommages standards de .NET (majuscules)
-  6. Compilez le programme: `dotnet build`
-  7. Lancez le serveur de step 2 dans un nouveau terminal
-  8. Vous pouvez maintenant observer que grâce à l'utilisation d'un IDL, le fichier .proto est suffisant pour que votre code .NET communique parfaitement avec votre code serveur en Python en exécutant: `bin/Debug/netcoreapp3.1/step3 20 22`
+  6. Lancez le serveur de step 2 dans un nouveau terminal
+  7. Compilez le programme: `dotnet build`
+  8. Exécutez le client tout juste compilé: `bin/Debug/netcoreapp3.1/step3 20 22`
   
-La solution complète est disponible dans le dossier [step3-fin](step3-fin).
+Vous pouvez maintenant observer que grâce à l'utilisation d'un IDL, le fichier .proto est suffisant pour que votre code .NET communique parfaitement avec votre code serveur en Python. Si nécessaire, la solution complète est disponible dans le dossier [step3-fin](step3-fin).
