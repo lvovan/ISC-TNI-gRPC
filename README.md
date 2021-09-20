@@ -33,7 +33,7 @@ Modifiez maintenant le fichier **protos/calc.proto** afin d'y ajouter une procé
   - Modifier le client **calc_client.py** afin qu'il appelle **Add** et **Multiply**, avec les mêmes paramètres d'entrée
   - Testez votre implémentation
 
-## Step 3. Création d'un client dans un autre langage
+## Step 3. Création d'un client dans un autre langage (.NET Core)
 Comme vu en cours, l'intérêt majeur des IDL tels que le permet gRPC via Protobuf est la capacité de rendre interopérables des technologies différentes. Dans ce dernier exercice nous allons conserver notre serveur, mais allons l'appeler depuis un client écrit en .NET et plutôt qu'en Python.
 
   1. Depuis le dossier **step3**
@@ -55,3 +55,5 @@ Comme vu en cours, l'intérêt majeur des IDL tels que le permet gRPC via Protob
   6. Compilez le programme: `dotnet build`
   7. Lancez le serveur de step 2 dans un nouveau terminal
   8. Exécutez le client .NET: `bin/Debug/netcoreapp3.1/step3 20 22`
+  
+La solution complète est disponible dans le dossier **step3-fin**.
