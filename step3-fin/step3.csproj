@@ -14,4 +14,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Protobuf Include="protos\calc.proto" GrpcServices="Client" />
+  </ItemGroup>
+
 </Project>
