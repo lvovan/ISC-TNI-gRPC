@@ -56,4 +56,4 @@ Comme vu en cours, l'intérêt majeur des IDL tels que le permet gRPC via Protob
   7. Lancez le serveur de step 2 dans un nouveau terminal
   8. Exécutez le client .NET: `bin/Debug/netcoreapp3.1/step3 20 22`
   
-La solution complète est disponible dans le dossier **step3-fin**.
+La solution complète est disponible dans le dossier [step3-fin](step3-fin).
