@@ -44,7 +44,7 @@ Comme vu en cours, l'intérêt majeur des IDL tels que le permet gRPC via Protob
           dotnet add package Google.Protobuf
           dotnet add package Grpc.Tools`
 
-  4. Ajoutez les lignes suivantes au fichier **step3.csproj**, qui permettent de référencer le fichier .proto dans le projet .NET, qui génèrera automatiquement l'implémentation nécessaire
+  4. Ajoutez les lignes suivantes au fichier **step3.csproj** comme enfant de la section **<project>**, qui permettent de référencer le fichier .proto dans le projet .NET, qui génèrera automatiquement l'implémentation nécessaire
 
           <ItemGroup>
               <Protobuf Include="protos\calc.proto" GrpcServices="Client" />
