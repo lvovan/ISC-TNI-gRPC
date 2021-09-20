@@ -4,19 +4,17 @@
 Lors de cette séance de travaux pratiques nous allons explorer gRPC et Protocol Buffers (*protobuf*) pour implémenter des services 
 
 ## Pré-requis
-1. Installer
-    - Python 3.x
-    - Créez un [environnement virtuel](https://docs.python.org/3/tutorial/venv.html)
-    - Installer le module Python **grpcio-tools**
-      `pip install grpcio-tools`
-    - [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core)
+Ce TP requiert un certain nombre de prérequis techniques sur votre machine:
+  - Python 3.x
+  - Installer le module Python **grpcio-tools** avec `pip install grpcio-tools`
+  - [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core)
+
+Créez un [environnement virtuel](https://docs.python.org/3/tutorial/venv.html) depuis le dossier **work**.
 
 ## Step 1. Exécution de l'exemple de démarrage
-Dans le dossier **work**, un fichier de définition *protobuf* (.proto) définissant l'interface est disponible dans **protos/calc.proto**.
-
-Regardez son contenu et notez qu'il ne définit qu'une seule procédure, **Add** qui:
+Regardez le contenu du fichier **protos/calc.proto** qui spécifie l'interface dans l'IDL gRPC et notez qu'il ne définit qu'une seule procédure, **Add** qui:
   - Prend en entrée un message **AddRequest** (deux entiers **a** et **b**),
-  - et renvoie un message de type **AddResponse** (un entier, **result**).
+  - Renvoie un message de type **AddResponse** (un entier, **result**).
 
 Exécutons maintenant cet exemple:
   1. Dans un premier terminal, lancez le serveur avec la commande `python3 calc_server.py`
