@@ -6,10 +6,9 @@ Lors de cette séance de travaux pratiques nous allons explorer gRPC et Protocol
 ## Pré-requis
 Ce TP requiert un certain nombre de prérequis techniques sur votre machine:
   - Python 3.x
+  - Créez un [environnement virtuel](https://docs.python.org/3/tutorial/venv.html)
   - Installer le module Python **grpcio-tools** avec `pip install grpcio-tools`
   - [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core)
-
-Créez un [environnement virtuel](https://docs.python.org/3/tutorial/venv.html) depuis le dossier **work**.
 
 ## Step 1. Exécution de l'exemple de démarrage
 Regardez le contenu du fichier **protos/calc.proto** qui spécifie l'interface dans l'IDL gRPC et notez qu'il ne définit qu'une seule procédure, **Add** qui:
