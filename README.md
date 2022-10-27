@@ -16,7 +16,7 @@ Regardez le contenu du fichier **protos/calc.proto** qui spécifie l'interface d
   - Renvoie un message de type **AddResponse** (un entier, **result**).
 
 Exécutons maintenant cet exemple:
-  1. Allez dans le dossier `step1`
+  1. Allez dans le dossier `step1` et chargez votre environnement virtuel (via le script `activate` qui dépend de votre plateforme)
   2. Dans un premier terminal, lancez le serveur avec la commande `python calc_server.py`
   3. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python calc_client.py 20 22`
   4. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
