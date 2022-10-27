@@ -16,8 +16,8 @@ Regardez le contenu du fichier **protos/calc.proto** qui spécifie l'interface d
   - Renvoie un message de type **AddResponse** (un entier, **result**).
 
 Exécutons maintenant cet exemple:
-  1. Dans un premier terminal, lancez le serveur avec la commande `python3 calc_server.py`
-  2. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python3 calc_client.py 20 22`
+  1. Dans un premier terminal, lancez le serveur avec la commande `python calc_server.py`
+  2. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python calc_client.py 20 22`
   3. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
 
 Sous Linux, vous pouvez également "regarder" le contenu du message tel qu'il est envoyé sur le réseau en coupant le serveur (CTRL+C) puis en exécutant `nc -l localhost 50051` (qui lancera une écoute sur le port **localhost:50051**) puis en relançant le client.
@@ -26,7 +26,7 @@ Sous Linux, vous pouvez également "regarder" le contenu du message tel qu'il es
 Modifiez maintenant le fichier **protos/calc.proto** afin d'y ajouter une procédure **Multiply**:
   - Ajoutez la procédure **rpc** adéquate
   - Trouvez une manière élégante de déclarer les types de message qui seront utilisés dans votre serveur
-  - Générez les fichiers Python liés à ce nouveau .proto, ce qui écrasera les fichiers générés avec la version originale: `python3 -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/calc.proto`
+  - Générez les fichiers Python liés à ce nouveau .proto, ce qui écrasera les fichiers générés avec la version originale: `python -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/calc.proto`
 
   - Implémenter la nouvelle procédure dans une fonction dédiée de **calc_server.py**
   - Modifier le client **calc_client.py** afin qu'il appelle **Add** et **Multiply**, avec les mêmes paramètres d'entrée
