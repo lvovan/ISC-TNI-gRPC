@@ -16,9 +16,10 @@ Regardez le contenu du fichier **protos/calc.proto** qui spécifie l'interface d
   - Renvoie un message de type **AddResponse** (un entier, **result**).
 
 Exécutons maintenant cet exemple:
-  1. Dans un premier terminal, lancez le serveur avec la commande `python calc_server.py`
-  2. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python calc_client.py 20 22`
-  3. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
+  1. Allez dans le dossier `step1`
+  2. Dans un premier terminal, lancez le serveur avec la commande `python calc_server.py`
+  3. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python calc_client.py 20 22`
+  4. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
 
 Sous Linux, vous pouvez également "regarder" le contenu du message tel qu'il est envoyé sur le réseau en coupant le serveur (CTRL+C) puis en exécutant `nc -l localhost 50051` (qui lancera une écoute sur le port **localhost:50051**) puis en relançant le client.
 
