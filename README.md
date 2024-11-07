@@ -17,9 +17,9 @@ Regardez le contenu du fichier **protos/calc.proto** qui spécifie l'interface d
 
 Exécutons maintenant cet exemple:
   1. Allez dans le dossier `step1` et chargez votre environnement virtuel (via le script `activate` qui dépend de votre plateforme)
-  2. Dans un premier terminal, lancez le serveur avec la commande `python calc_server.py`
-  3. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python calc_client.py 20 22`
-  4. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
+  2. Dans un premier terminal, lancez le serveur avec la commande `python calc_server.py`. Si cela ne fonctionne pas, essayez de définir la variable d'environnement d'implémentation ainsi: `$env:PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION="python"` (PowerShell) ou `export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION="python"` (bash)
+  4. Dans un second terminal, lancez le client en lui passant en paramètre deux nombres entiers `python calc_client.py 20 22`
+  5. Vous observerez que le serveur a répondu à la requête en renvoyons le résultat de l'addition
 
 Sous Linux, vous pouvez également "regarder" le contenu du message tel qu'il est envoyé sur le réseau en coupant le serveur (CTRL+C) puis en exécutant `nc -l localhost 50051` (qui lancera une écoute sur le port **localhost:50051**) puis en relançant le client.
 
